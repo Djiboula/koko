@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="style_ins.css">
+</head>
+
+<body>
+    <header>
+        <h2 class="GMD">GMD-LOTO</h2>
+        <h1>Connexion</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="inscription.html">Inscription</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+           <form class="formulaire" id="formConnexion">
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password" class="required">Mot de passe :</label>
+    <div style="position: relative; display: inline-block; width: 90%;">
+        <input type="password" id="password" name="password" required
+            pattern="[A-Za-z0-9]{6}" maxlength="6" style="padding-right: 10px; width: 100%;">
+        <i class="fa-solid fa-eye" id="togglePassword" style="..."></i>
+    </div>
+
+    <button type="submit">Se connecter</button>
+</form>
+
+<script>
+document.getElementById('formConnexion').addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    const response = await fetch('/api/users/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+        alert("Connexion réussie !");
+        // Rediriger par exemple vers la page d'accueil
+        window.location.href = "compte.html";
+    } else {
+        alert("Erreur : " + result.message);
+    }
+});
+</script>
+
+                <button type="submit">Se connecter</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Bénéficiez d'une plateforme exhaustive pour augmenter vos probabilités et surveiller vos performances en
+            direct.
+        </p>
+        <div class="footer-logos">
+            <img src="logo GMD.jpg" alt="Logo GMD">
+            <img src="LOTO LOGO.jpg" alt="Logo Loto">
+            <img src="mixx.jpg" alt="Logo Loto">
+            <img src="moov logo.jpg" alt="Logo Loto">
+            <p>© 2025 LONATO. Tous droits réservés.</p>
+        </div>
+        <p>&copy; 2025 - Triomphe plateforme</p>
+    </footer>
+</body>
+
+</html>
