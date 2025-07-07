@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Mon Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header id="haut">
+        <h2 class="GMD">GMD-LOTO</h2>
+        <h1>Bienvenue sur notre plateforme GMD-LOTO</h1>
+
+        <div class="menu-container">
+            <div class="dots" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="dropdown-menu" id="dropdownMenu">
+                <nav>
+                    <li><a href="index.html"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="35px" fill="#070707">
+                                <path
+                                    d="M226.67-186.67h140v-246.66h226.66v246.66h140v-380L480-756.67l-253.33 190v380ZM160-120v-480l320-240 320 240v480H526.67v-246.67h-93.34V-120H160Zm320-352Z" />
+                            </svg>Accueil</a></li>
+                    <li><a href="#services"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="35px" fill="#070707">
+                                <path
+                                    d="M440-120v-66.67h333.33V-484q0-121.46-85.38-206.06-85.38-84.61-207.95-84.61t-207.95 84.61q-85.38 84.6-85.38 206.06v244H160q-33 0-56.5-23.5T80-320v-80q0-21 10.5-39.5T120-469l3-53q8-68 39.5-126t79-101q47.5-43 109-67T480-840q68 0 129 24t109 66.5Q766-707 797-649t40 126l3 52q19 9 29.5 27t10.5 38v92q0 20-10.5 38T840-249v62.33q0 27.5-19.58 47.09Q800.83-120 773.33-120H440Zm-80.12-286.67q-14.21 0-23.71-9.61-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5Zm240 0q-14.21 0-23.71-9.61-9.5-9.62-9.5-23.84 0-14.21 9.61-23.71 9.62-9.5 23.84-9.5 14.21 0 23.71 9.61 9.5 9.62 9.5 23.84 0 14.21-9.61 23.71-9.62 9.5-23.84 9.5ZM241-462q-7-106 64-182t177-76q87.67 0 152.83 57.17Q700-605.67 714-519q-89.67-1-164.17-49.67-74.5-48.66-115.02-129.33Q419-618 367.5-555.5T241-462Z" />
+                            </svg>Services</a></li>
+                    <li><a href="inscription.html"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="35px" fill="#070707">
+                                <path
+                                    d="M480-480.67q-66 0-109.67-43.66Q326.67-568 326.67-634t43.66-109.67Q414-787.33 480-787.33t109.67 43.66Q633.33-700 633.33-634t-43.66 109.67Q546-480.67 480-480.67ZM160-160v-100q0-36.67 18.5-64.17T226.67-366q65.33-30.33 127.66-45.5 62.34-15.17 125.67-15.17t125.33 15.5q62 15.5 127.28 45.3 30.54 14.42 48.96 41.81Q800-296.67 800-260v100H160Zm66.67-66.67h506.66V-260q0-14.33-8.16-27-8.17-12.67-20.5-19-60.67-29.67-114.34-41.83Q536.67-360 480-360t-111 12.17Q314.67-335.67 254.67-306q-12.34 6.33-20.17 19-7.83 12.67-7.83 27v33.33ZM480-547.33q37 0 61.83-24.84Q566.67-597 566.67-634t-24.84-61.83Q517-720.67 480-720.67t-61.83 24.84Q393.33-671 393.33-634t24.84 61.83Q443-547.33 480-547.33Zm0-86.67Zm0 407.33Z" />
+                            </svg>Inscription</a></li>
+                    <li><a href="connexion.html"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="35px" fill="#070707">
+                                <path
+                                    d="M186.67-120q-27 0-46.84-19.83Q120-159.67 120-186.67v-586.66q0-27 19.83-46.84Q159.67-840 186.67-840h292.66v66.67H186.67v586.66h292.66V-120H186.67Zm470.66-176.67-47-48 102-102H360v-66.66h351l-102-102 47-48 184 184-182.67 182.66Z" />
+                            </svg>Connexion</a></li>
+                    <li><a href="#contact"><svg xmlns="http://www.w3.org/2000/svg" height="20px"
+                                viewBox="0 -960 960 960" width="35px" fill="#070707">
+                                <path
+                                    d="M770.67-484.67q-3.34-119.66-86.5-202.83Q601-770.67 481.33-774v-66.67q73 1.34 137.17 29.84 64.17 28.5 112.33 76.66Q779-686 807.5-621.83q28.5 64.16 29.83 137.16h-66.66Zm-166 0q-3.34-50-38.34-84.66-35-34.67-85-38V-674q77.67 3.33 132.17 57.5 54.5 54.17 57.83 131.83h-66.66ZM796-120q-119 0-240-55.5T333-333Q231-435 175.5-556T120-796q0-18.86 12.57-31.43T164-840h147.33q14 0 24.34 9.83Q346-820.33 349.33-806l26.62 130.43q2.05 14.9-.62 26.24-2.66 11.33-10.82 19.48L265.67-530q24 41.67 52.5 78.5T381-381.33q35 35.66 73.67 65.5Q493.33-286 536-262.67l94.67-96.66q9.66-10.34 23.26-14.5 13.61-4.17 26.74-2.17L806-349.33q14.67 4 24.33 15.53Q840-322.27 840-308v144q0 18.86-12.57 31.43T796-120ZM233-592l76-76.67-21-104.66H187q3 41.66 13.67 86Q211.33-643 233-592Zm365.33 361.33q40.34 18.34 85.84 29.67 45.5 11.33 89.16 13.67V-288l-100-20.33-75 77.66ZM233-592Zm365.33 361.33Z" />
+                            </svg>Contact</a></li>
+                </nav>
+            </ul>
+        </div>
+
+        <script>
+            function toggleMenu() {
+                document.getElementById("dropdownMenu").classList.toggle("show");
+            }
+
+            window.onclick = function (event) {
+                if (!event.target.matches('.dots') && !event.target.matches('.dots *')) {
+                    var dropdown = document.getElementById("dropdownMenu");
+                    if (dropdown.classList.contains('show')) {
+                        dropdown.classList.remove('show');
+                    }
+                }
+            }
+        </script>
+        <div class="logo-container">
+            <img src="logo GMD.jpg" alt="Logo GMD">
+        </div>
+
+    </header>
+    <section>
+
+        <h1>
+            <style>
+                .o {
+                    margin: 0;
+                    padding: 0;
+                    background: #111;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 30vh;
+
+
+                }
+
+                .carousel {
+                    width: 100%;
+                    height: 150px;
+                    overflow: hidden;
+                    position: relative;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgba(225, 225, 225, 0.3);
+                }
+
+                .carousel-track {
+                    display: flex;
+                    width: calc(300px * 5);
+                    /* 5 images par exemple */
+                    animation: scroll 25s linear infinite;
+
+                }
+
+                .carousel-track img {
+                    width: 400px;
+                    height: 150px;
+                    object-fit: cover;
+                    padding: 10px;
+                }
+
+                @keyframes scroll {
+                    0% {
+                        transform: translateX(0);
+                    }
+
+                    100% {
+                        transform: translateX(-1500px);
+                    }
+
+                    /* 300px * 5 */
+
+                }
+            </style>
+            </head>
+
+            <body>
+                <div class="o">
+                    <div class="carousel">
+                        <div class="carousel-track" id="track">
+                            <img src="lonato.jpg" alt="Image 1">
+                            <img src="bole de loto.jpg" alt="Image 2">
+                            <img src="boul1.jpeg" alt="Image 3">
+                            <img src="lonato_comment.webp" alt="Image 4">
+                            <img src="lonato.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    const track = document.getElementById('track');
+                    const images = track.querySelectorAll('img');
+                    let index = 0;
+
+                    setInterval(() => {
+                        index = (index + 1) % images.length;
+                        track.style.transform = translateX(-${ index * 400}px);
+                    }, 3000); // Change every 3 seconds
+                </script>
+
+        </h1>
+    </section>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Jouez et gagnez avec LONATO</h2>
+            <p>Découvrez les résultats en direct et maximisez vos chances grâce à notre plateforme GMDLOTO.</p>
+
+            <a href="#resultats" class="resultats">Voir les résultat</a>
+
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="service-cards">
+
+
+            </div>
+        </div>
+    </section>
+
+    <div class="card-service">
+
+        <h3>📈 Analyse des tendances</h3>
+        <p>Obtenez des statistiques avancées pour affiner vos stratégies.</p>
+    </div>
+    <div class="card-service">
+
+        <h3>👥Communauté de joueurs</h3>
+        <p>Partagez vos expériences et échangez avec d'autres passionnés.</p>
+    </div>
+    <div class="card-service">
+
+        <h3>💵Abonnement mensuel à 1200 FCFA</h3>
+        <p>Accédez à tous les services premium pour seulement 1200 FCFA par mois. Une opportunité unique d'investir dans
+            vos chances de gagner.</p>
+    </div>
+    </div>
+    </section>
+
+    <main>
+        <section class="resultats" id="resultats">
+            <h2>Résultats publiés</h2>
+            <div id="publicationsContainer"></div>
+            <div class="cards">
+                <div class="card">
+                    <img src="image/logo GMD.jpg" alt="Résultat 1">
+                    <p>Nom du numéro : Super Win</p>
+                </div>
+                <div class="card">
+                    <img src="images/resultat2.jpg" alt="Résultat 2">
+                    <p>Nom du numéro : Mega Gain</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="forcasseurs">
+            <h2>Nos Forcasseurs</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="image/logo GMD.jpg" alt="Forcasseur 1">
+                    <p>Nom : Força One</p>
+                </div>
+                <div class="card">
+                    <img src="images/forcasseur2.jpg" alt="Forcasseur 2">
+                    <p>Nom : Lucky Force</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="commentaires">
+            <h2>Commentaires récents</h2>
+            <div class="comment">
+                <p><strong>Força One :</strong> Préparez-vous pour demain, gros numéro en vue !</p>
+            </div>
+            <div class="comment">
+                <p><strong>Lucky Force :</strong> Bravo à ceux qui ont joué hier !</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Publications (affichage des dernières 24h)
+        const container = document.getElementById("publicationsContainer");
+        const publications = JSON.parse(localStorage.getItem("publications") || "[]");
+        const now = Date.now();
+        const validPublications = publications.filter(pub => now - pub.timestamp < 24 * 60 * 60 * 1000);
+
+        if (validPublications.length > 0) {
+            validPublications.forEach(pub => {
+                const date = new Date(pub.timestamp);
+                const heure = date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+                const auteur = pub.auteur || "Utilisateur inconnu";
+                const bloc = document.createElement("div");
+                bloc.classList.add("tirage-card");
+                bloc.innerHTML = `
+                <p style="font-size: 0.9em; color: gray;">🕒 Publié à ${heure}</p>
+                <h4>${pub.titre}</h4>
+                <p>${pub.contenu}</p>
+                <p style="font-size: 0.8em; color: #666;">👤 Publié par : <strong>${auteur}</strong></p>`;
+                container.appendChild(bloc);
+            });
+        } else {
+            container.innerHTML = "<p>Aucune publication récente.</p>";
+        }
+
+        // Nettoyage après affichage
+        localStorage.setItem("publications", JSON.stringify(validPublications));
+    </script>
+
+    <footer id="contact">
+        <p>
+            Bénéficiez d'une plateforme exhaustive pour augmenter vos probabilités et surveiller vos performances en
+            direct.
+        </p>
+        <div class="footer-logos">
+            <img src="logo GMD.jpg" alt="Logo GMD">
+            <img src="LOTO LOGO.jpg" alt="Logo Loto">
+            <img src="mixx.jpg" alt="Logo Loto">
+            <img src="moov logo.jpg" alt="Logo Loto">
+            <p>© 2025 LONATO. Tous droits réservés.</p>
+        </div>
+        </div>
+        <div class="contact-info">
+            <p>📞 Appelez-nous : <a href="tel:+22897939921" class="contact-info">Appel</a></p>
+            <p>💬 WhatsApp : <a href="https://wa.me/+22897939921" target="_blank" class="contact-info">WhatsApp</a></p>
+        </div>
+        <p> Triomphe plateforme</p>
+        <p>&copy; 2025 - Mon meilleurs Site</p>
+        <a href="#haut" class="Ha">👆🏼 aller en haut</a>
+    </footer>
+
+</body>
+
+</html>
