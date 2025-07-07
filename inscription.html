@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+    <link rel="stylesheet" href="style_ins.css">
+    <script defer src="inscription.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2 class="GMD">GMD-LOTO</h2>
+        <h1>Inscription</h1>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="connexion.html">Connexion</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <form class="formulaire" action="#" method="post" enctype="multipart/form-data">
+                <label for="nom">Nom d'utilisateur :</label>
+                <input type="text" id="nom" name="nom" required><br>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required><br>
+
+                <label for="password" class="required">Mot de passe :</label>
+                <div style="position: relative; display: inline-block; width: 90%;">
+                    <input type="password" id="password" name="password" placeholder="crée un mot de passe"
+                        pattern="[A-Za-z0-9]{6}" maxlength="6" required style="padding-right: 10px; width: 100%;">
+
+                    <i class="fa-solid fa-eye" id="togglePassword" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
+                          cursor: pointer; color: #555555;"></i>
+
+                </div>
+                <script>
+                    const togglePassword = document.getElementById('togglePassword');
+                    const passwordInput = document.getElementById('password');
+
+                    togglePassword.addEventListener('click', function () {
+                        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+                        passwordInput.setAttribute('type', type);
+
+                        // Toggle icon
+                        this.classList.toggle('fa-eye');
+                        this.classList.toggle('fa-eye-slash');
+                    });
+                </script>
+                <label for="role">--Je suis-> :</label>
+                <select id="role" name="role" required>
+                    <option value="">-- Choisissez --</option>
+                    <option value="parieur">Parieur</option>
+                    <option value="forcasseur">Forcasseur</option>
+                </select> <br>
+
+                <div id="uploadImage" style="display: none;">
+                    <label for="photoIdentite">Photo d'identité :</label>
+                    <input type="file" id="photoIdentite" name="photoIdentite" accept="image/*">
+                </div><br>
+
+                <button type="submit">S'inscrire</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Bénéficiez d'une plateforme exhaustive pour augmenter vos probabilités et surveiller vos performances en
+            direct.
+        </p>
+        <div class="footer-logos">
+            <img src="logo GMD.jpg" alt="Logo GMD">
+            <img src="LOTO LOGO.jpg" alt="Logo Loto">
+            <img src="mixx.jpg" alt="Logo Loto">
+            <img src="moov logo.jpg" alt="Logo Loto">
+            <p>© 2025 LONATO. Tous droits réservés.</p>
+        </div>
+        <p>&copy; 2025 - Triomphe plateforme</p>
+    </footer>
+</body>
+
+</html>
